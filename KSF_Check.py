@@ -7,7 +7,7 @@ t1MapTime = defaultdict(int)
 regMapTime = defaultdict(int)
 def checkServers():
     # Beginner Servers tierLocationValue
-    t1uscAddy = ("74.91.115.159", 27015) 
+    t1uscAddy = ("74.91.115.159", 27015)
     t1uscInfo = a2s.info(t1uscAddy)
     t1MapTime[t1uscInfo.map_name]+=1
     t1useAddy = ("74.91.123.51", 27030)
@@ -32,11 +32,11 @@ def writeInfo():
         json.dump(t1MapTime, f)
     with open('regularMapTime.json', 'w') as f:
         json.dump(regMapTime, f)
-    threading.Timer(3600*6, writeInfo).start()
+    threading.Timer(3600, writeInfo).start()
 checkServers()
 writeInfo()
 
 
-    
+
 
 
