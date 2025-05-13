@@ -1,5 +1,4 @@
 
-```html
 <div>
   <p>In terminal run:</p>
   <pre><code>pip install -r requirements/base.txt</code></pre>
