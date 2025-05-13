@@ -3,8 +3,10 @@ import threading
 import json
 from collections import defaultdict
 
-t1MapTime = defaultdict(int)
-regMapTime = defaultdict(int)
+with open('beginnerMapTime.json', 'r') as f:
+    t1MapTime = defaultdict(int, json.load(f))
+with open('regularMapTime.json', 'r') as f:
+    regMapTime = defaultdict(int, json.load(f))
 def checkServers():
     # Beginner Servers tierLocationValue
     t1uscAddy = ("74.91.115.159", 27015)
@@ -28,6 +30,8 @@ def checkServers():
     regMapTime[regAuInfo.map_name]+=1
     threading.Timer(300, checkServers).start()
 def writeInfo():
+    print("Beginner Map Time: ", t1MapTime)
+    print("Regular Map Time: ", regMapTime)
     with open('beginnerMapTime.json', 'w') as f:
         json.dump(t1MapTime, f)
     with open('regularMapTime.json', 'w') as f:
