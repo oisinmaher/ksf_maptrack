@@ -1,11 +1,11 @@
 
 <div>
   <p>In terminal run:</p>
-  <pre><code>pip install -r requirements/base.txt</code></pre>
+  <pre><code>pip install -r requirements.txt</code></pre>
 
   <p>Or:</p>
   <pre><code>cd ksf_maptrack_json
-pip install -r requirements/base.txt</code></pre>
+pip install -r requirements.txt</code></pre>
 
   <p>Uses <a href="https://pypi.org/project/python-a2s/">a2s</a></p>
 
